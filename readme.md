@@ -1,23 +1,14 @@
 # Euclidean gradient flow versus KM: three Bloch-plane examples
 
-This standalone package produces one row of three state-space panels, showing a comparison between the Euclidean (Hilbert—Schmidt) gradient flow and the physical KM iteration on the same likelihoods and from the same initial states. Both methods are shown in all three panels. The compact layout targets one column at 85 × 25.5 mm, with 8 pt state labels and 7 pt panel letters `(a)`, `(b)`, and `(c)` in the upper left. Since the manuscript caption supplies the scenario names and visual key, there are no descriptive headings, legend, axes, ticks, or coordinate labels. The horizontal coordinate is $x$ and the vertical coordinate is $z$ in the Bloch-plane definition below. The blue circle marks $x^2+z^2=1$. All three disks have the same physical diameter and scale. Panel-specific horizontal offsets control the spacing independently of disk sizes and point-label placement.
+This standalone package produces one row of three state-space panels, showing a comparison between the Euclidean (Hilbert–Schmidt) gradient flow and the physical KM iteration on the same likelihoods and from the same initial states. Both methods are shown in all three panels. The compact layout targets one column at 85 × 25.5 mm, with 8 pt state labels and 7 pt panel letters `(a)`, `(b)`, and `(c)` in the upper left. Since the manuscript caption supplies the scenario names and visual key, there are no descriptive headings, legend, axes, ticks, or coordinate labels. The horizontal coordinate is $x$ and the vertical coordinate is $z$ in the Bloch-plane definition below. The blue circle marks $x^2+z^2=1$. All three disks have the same physical diameter and scale. Panel-specific horizontal offsets control the spacing independently of disk sizes and point-label placement.
 
 ## View or run the figure
 
-The supplied `outputs` folder contains `euclidean_km_bloch.png`,
-`euclidean_km_bloch.pdf`, and `euclidean_km_bloch.svg`. Open the PNG in VS Code
-for a preview, use the PDF for a manuscript, or insert the SVG into PowerPoint.
-PNG export defaults to **600 dpi**; PDF and SVG use vector graphics and remain
-sharp when enlarged. Bundled STIX fonts avoid dependence on locally installed
-fonts or TeX.
+The supplied `outputs` folder contains `euclidean_km_bloch.png`, `euclidean_km_bloch.pdf`, and `euclidean_km_bloch.svg`. Open the PNG in VS Code for a preview, use the PDF for a manuscript, or insert the SVG into PowerPoint. PNG export defaults to **600 dpi**; PDF and SVG use vector graphics and remain sharp when enlarged. Bundled STIX fonts avoid dependence on locally installed fonts or TeX.
 
-For a single-column REVTeX figure, include the vector PDF with
-`\includegraphics[width=\columnwidth]{euclidean_km_bloch.pdf}`. Its native width
-is 85 mm (3.34646 in); the compact spacing removes unnecessary exterior margins
-without changing the geometry. Review the PDF at its final printed size: extra
-PNG resolution does not make physically small lettering larger.
+For a single-column REVTeX figure, include the vector PDF with `\includegraphics[width=\columnwidth]{euclidean_km_bloch.pdf}`. Its native width is 85 mm (3.34646 in). The compact spacing removes unnecessary exterior margins without changing the geometry. Review the PDF at its final printed size: extra PNG resolution does not make physically small lettering larger.
 
-Use **Python 3.11 or newer**; the project was tested with Python 3.12. On your Mac:
+Use **Python 3.11 or newer**; the project was tested with Python 3.12. On macOS:
 
 1. Extract the package. In VS Code, choose **File → Open Folder…** and select
    `euclidean_km_bloch`. Use **File → New Window** first to keep another project open.
@@ -30,13 +21,9 @@ python -m pip install -r requirements.txt
 python make_figure.py
 ```
 
-If necessary, replace `python3` in the first command with a newer installed
-interpreter such as `python3.12`. Select `.venv/bin/python` with VS Code's
-**Python: Select Interpreter** command. In subsequent terminals, activate the
-existing environment with `source .venv/bin/activate`.
+If necessary, replace `python3` in the first command with a newer installed interpreter such as `python3.12`. Select `.venv/bin/python` with VS Code's **Python: Select Interpreter** command. In subsequent terminals, activate the existing environment with `source .venv/bin/activate`.
 
-`python make_figure.py` recomputes the trajectories, updates the cache and
-exports all three formats. After changing only styling, reuse the cached data:
+`python make_figure.py` recomputes the trajectories, updates the cache and exports all three formats. After changing only styling, reuse the cached data:
 
 ```bash
 python make_figure.py --plot-only
@@ -49,11 +36,8 @@ To export a variant into a separate folder:
 python make_figure.py --plot-only --output-dir alternate_outputs
 ```
 
-The cached `data/scenario_a.npz`, `data/scenario_b.npz`, `data/scenario_c.npz`, and
-`data/diagnostics.json` record the computed curves and numerical information. Cache
-fingerprints guard the model and numerical settings: `--plot-only` refuses an
-incompatible cache. After changing physics or numerical parameters, rerun
-`python make_figure.py` without `--plot-only`.
+The cached `data/scenario_a.npz`, `data/scenario_b.npz`, `data/scenario_c.npz`, and `data/diagnostics.json` record the computed curves and numerical information. Cache fingerprints guard the model and numerical settings: `--plot-only` refuses an
+incompatible cache. After changing physics or numerical parameters, rerun `python make_figure.py` without `--plot-only`.
 
 ## What the figure shows
 
