@@ -1,0 +1,169 @@
+{
+  "fingerprint": "b735522c1f6c05f0c0bbf48e13431a5f3c654e4bb0f648973b565fe72fd151e5",
+  "numerics": {
+    "flow_samples": 2400,
+    "flow_rtol": 2e-11,
+    "flow_atol": 2e-13,
+    "flow_endpoint_tolerance": 1e-10,
+    "km_decimal_digits": 80,
+    "km_step_tolerance": "1e-26",
+    "km_max_iterations": 10000
+  },
+  "interpretation": "Solid black inside the physical disk; dashed black outside. The purple KM line joins all computed discrete iterates; joining segments guide the eye and are not a continuous flow.",
+  "panels": {
+    "a": {
+      "model": {
+        "center": [
+          -0.1,
+          0.1
+        ],
+        "measurement_means_uvy": [
+          -0.14088320528055173,
+          0.01232568334324388,
+          0.0
+        ],
+        "measurement_weights_uvy": [
+          0.06,
+          0.54,
+          0.4
+        ],
+        "angle_degrees": -40.0,
+        "physical_maximum": [
+          -0.1,
+          0.1
+        ]
+      },
+      "initial_contour_level": -0.7555822670029209,
+      "euclidean": {
+        "boundary_crossing_times": [],
+        "boundary_crossing_points": [],
+        "endpoint_error": 1.0000003193777179e-10,
+        "minimum_sampled_likelihood_increment": -1.1102230246251565e-16,
+        "maximum_sampled_radius": 0.5821511831131152,
+        "solver_steps": 1729
+      },
+      "km": {
+        "updates": 915,
+        "classification": "interior MLE",
+        "endpoint": [
+          -0.1,
+          0.1
+        ],
+        "last_step": 9.721034553023888e-27,
+        "boundary_gap": 0.98,
+        "likelihood_gap_to_mle": 0.0,
+        "minimum_likelihood_increment": 9.352734737029649e-53,
+        "maximum_determinant_identity_error": 5.7e-89
+      }
+    },
+    "b": {
+      "model": {
+        "center": [
+          1.3,
+          0.35
+        ],
+        "measurement_means_uvy": [
+          0.9519716382329886,
+          0.9519716382329885,
+          0.0
+        ],
+        "measurement_weights_uvy": [
+          0.45,
+          0.45,
+          0.1
+        ],
+        "angle_degrees": -29.931511840507792,
+        "physical_maximum": [
+          0.9656157585206697,
+          0.25997347344787236
+        ]
+      },
+      "initial_contour_level": -0.8524057874445544,
+      "euclidean": {
+        "boundary_crossing_times": [
+          2.291542249690914
+        ],
+        "boundary_crossing_points": [
+          [
+            0.999932386588587,
+            -0.011628510276578638
+          ]
+        ],
+        "endpoint_error": 1.0000010459882965e-10,
+        "minimum_sampled_likelihood_increment": -5.551115123125783e-17,
+        "maximum_sampled_radius": 1.3462912017129,
+        "solver_steps": 884
+      },
+      "km": {
+        "updates": 123,
+        "classification": "nonoptimal boundary approach",
+        "endpoint": [
+          0.9897954037504115,
+          0.14249581998977986
+        ],
+        "last_step": 7.377745981925157e-27,
+        "boundary_gap": 4.193367439765955e-51,
+        "likelihood_gap_to_mle": 0.004246257941328435,
+        "minimum_likelihood_increment": 5.232404551490178e-28,
+        "maximum_determinant_identity_error": 7e-90
+      }
+    },
+    "c": {
+      "model": {
+        "center": [
+          0.0,
+          -0.8
+        ],
+        "measurement_means_uvy": [
+          -0.2070552360820166,
+          -0.7727406610312547,
+          0.0
+        ],
+        "measurement_weights_uvy": [
+          0.0135,
+          0.8865,
+          0.1
+        ],
+        "angle_degrees": 15.0,
+        "physical_maximum": [
+          0.0,
+          -0.8
+        ]
+      },
+      "initial_contour_level": -0.6199995790721812,
+      "euclidean": {
+        "boundary_crossing_times": [
+          0.7054643625499013,
+          8.90402547512847
+        ],
+        "boundary_crossing_points": [
+          [
+            0.975095110241443,
+            -0.2217871186142877
+          ],
+          [
+            0.8130942726746092,
+            -0.5821320329132802
+          ]
+        ],
+        "endpoint_error": 1.0000001920729182e-10,
+        "minimum_sampled_likelihood_increment": 0.0,
+        "maximum_sampled_radius": 1.0998466550264139,
+        "solver_steps": 1625
+      },
+      "km": {
+        "updates": 552,
+        "classification": "nonoptimal boundary approach",
+        "endpoint": [
+          0.8831857977747325,
+          -0.469023290049662
+        ],
+        "last_step": 9.51349186175836e-27,
+        "boundary_gap": 4.447997991451236e-51,
+        "likelihood_gap_to_mle": 0.015572675344847131,
+        "minimum_likelihood_increment": 1.2270733413849794e-27,
+        "maximum_determinant_identity_error": 1.649352893533433e-89
+      }
+    }
+  }
+}
